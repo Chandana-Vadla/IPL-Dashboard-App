@@ -1,0 +1,16 @@
+/* Write your CSS here */
+.latest-matches-heading {
+  font-size: 12px;
+  font-family: 'Bree Serif';
+  color: #ffffff;
+}
+
+.latest-match-container {
+  border-radius: 12px;
+  background-color: #0f172a;
+  color: #ffffff;
+}
+
+.competingTeamLogo {
+  height: 30px;
+}

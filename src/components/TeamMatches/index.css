@@ -1,0 +1,15 @@
+/* Write your CSS here */
+
+.team-matches-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 24px;
+}
+
+.team-banner {
+  height: 90px;
+}
+
+

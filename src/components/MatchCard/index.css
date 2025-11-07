@@ -1,0 +1,12 @@
+/* Write your CSS here */
+.competing-team-logo {
+  height: 30px;
+}
+
+.recent-match-item {
+  border-radius: 12px;
+  background-color: #0f172a;
+  color: #ffffff;
+  margin-top: 12px;
+  margin-right: 12px;
+}
