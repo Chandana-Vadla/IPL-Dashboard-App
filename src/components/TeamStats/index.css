@@ -1,0 +1,14 @@
+.team-stats-container {
+  background-color: #0f172a;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.team-stats-heading {
+  font-family: 'Bree Serif';
+  font-size: 18px;
+  margin-bottom: 10px;
+}
