@@ -1,11 +1,5 @@
-import {
-  PieChart,
-  Pie,
-  Cell,
-  Legend,
-  Tooltip,
-  ResponsiveContainer,
-} from 'recharts'
+// src/components/TeamStats/index.js
+import {PieChart, Pie, Cell, Legend, Tooltip} from 'recharts'
 import './index.css'
 
 const TeamStats = props => {
@@ -20,31 +14,48 @@ const TeamStats = props => {
   ]
 
   return (
-    <div className="team-stats-container">
-      <h1 className="team-stats-heading">Team Match Statistics</h1>
-      <ResponsiveContainer width="100%" height={300}>
-        <PieChart>
+    <div
+      className="team-stats-container"
+      style={{
+        width: '100%',
+        maxWidth: '500px',
+        margin: '0 auto',
+        backgroundColor: '#0f172a',
+        padding: '16px',
+        borderRadius: '12px',
+      }}
+    >
+      <h2 className="team-stats-heading">Team Match Statistics</h2>
+
+      {/* The key fix: give explicit width/height and center the chart */}
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <PieChart width={350} height={300}>
           <Pie
             data={data}
             cx="50%"
             cy="50%"
-            labelLine={false}
-            label={({name, value}) => `${name}: ${value}`}
-            outerRadius={100}
-            fill="#8884d8"
             dataKey="value"
+            outerRadius={100}
+            label
           >
-            {data.map((entry, index) => (
+            {data.map(entry => (
               <Cell
-                key={`cell-${index}`}
-                fill={COLORS[index % COLORS.length]}
+                key={entry.name}
+                name={entry.name}
+                fill={COLORS[data.indexOf(entry) % COLORS.length]}
               />
             ))}
           </Pie>
           <Tooltip />
           <Legend />
         </PieChart>
-      </ResponsiveContainer>
+      </div>
     </div>
   )
 }
